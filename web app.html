@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+
+<html lang="th"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100%;margin:0;padding:0;background-color:#fff8f5;color:#1e1b18;font-family:'Be Vietnam Pro',sans-serif;}.pb-safe{padding-bottom:calc(1rem + env(safe-area-inset-bottom,0px));}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+.accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease; opacity: 0; }
+.accordion-content.expanded { max-height: 500px; opacity: 1; }
+.rotate-chevron { transition: transform 0.3s ease; }
+.rotate-chevron.open { transform: rotate(180deg); }
+</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "background": "#fff8f5", "surface-container-high": "#efe6e2", "surface-dim": "#e1d8d4", "on-error": "#ffffff", "surface-variant": "#e9e1dc", "secondary": "#944931", "on-primary-container": "#b7e9cf", "inverse-surface": "#34302c", "secondary-container": "#fd9d80", "surface-container-lowest": "#ffffff", "on-primary": "#ffffff", "outline-variant": "#c0c9c2", "primary-container": "#3d6b56", "on-primary-fixed": "#002114", "tertiary-container": "#87580a", "tertiary": "#684200", "surface-container-highest": "#e9e1dc", "surface-tint": "#396752", "on-tertiary-fixed": "#2a1800", "on-secondary-fixed-variant": "#76321d", "surface-container-low": "#fbf2ed", "on-secondary": "#ffffff", "secondary-fixed-dim": "#ffb59f", "primary-fixed": "#bceed3", "on-primary-fixed-variant": "#204f3c", "on-tertiary-container": "#ffd8a8", "on-surface-variant": "#414944", "inverse-on-surface": "#f8efea", "on-error-container": "#93000a", "surface-bright": "#fff8f5", "primary": "#24533f", "primary-fixed-dim": "#a0d1b8", "error-container": "#ffdad6", "secondary-fixed": "#ffdbd0", "on-secondary-container": "#77331d", "outline": "#717973", "surface-container": "#f5ece7", "on-surface": "#1e1b18", "surface": "#fff8f5", "on-tertiary-fixed-variant": "#643f00", "error": "#ba1a1a", "tertiary-fixed": "#ffddb5", "inverse-primary": "#a0d1b8", "on-tertiary": "#ffffff", "tertiary-fixed-dim": "#f9bb68", "on-secondary-fixed": "#3a0a00", "on-background": "#1e1b18" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.5rem", "gutter-sm": "0.75rem", "space-xs": "0.25rem", "space-xl": "2.25rem", "margin-sm": "1rem", "space-md": "1rem", "space-sm": "0.5rem", "gutter": "1rem", "margin": "1.25rem", "margin-lg": "2rem", "gutter-lg": "1.5rem" }, "fontFamily": { "label-lg": ["Be Vietnam Pro"], "headline-sm": ["Be Vietnam Pro"], "headline-lg": ["Be Vietnam Pro"], "body-lg": ["Be Vietnam Pro"], "label-md": ["Be Vietnam Pro"], "label-sm": ["Be Vietnam Pro"], "body-md": ["Be Vietnam Pro"], "display-lg-mobile": ["Be Vietnam Pro"], "display-lg": ["Be Vietnam Pro"], "headline-md": ["Be Vietnam Pro"], "body-sm": ["Be Vietnam Pro"] }, "fontSize": { "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "600" }], "headline-lg": ["26px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["17px", { "lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400" }], "label-md": ["12px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "500" }], "label-sm": ["11px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "600" }], "body-md": ["15px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }], "display-lg-mobile": ["30px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "display-lg": ["36px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["22px", { "lineHeight": "32px", "letterSpacing": "0em", "fontWeight": "600" }], "body-sm": ["13px", { "lineHeight": "22px", "letterSpacing": "0.01em", "fontWeight": "400" }] } } } }</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-background font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(44,40,37,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0"><img alt="MindMap Thai AI Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1XpM3zXs3BjyF0jyE39g95mbzMmKKmQRB1cXcrdGCkyNkz2ooyLqHAfTfeVoLK6mInXDEqCw5aJV1ivKpueTk7ca1a36-OWccDxKxQnzkPAoNLZP5LAy6IgElqv0RQYpgApDz5GBVDApXFyD3g_qKbOWJ6843G7l0LCLDWbGVNpLOJny3-7zBMZvd99k59vmKEScuPQ2WHpdx4OOXHZAbrokMa08bT0Gdl1SAgch6w7XLhB3shpSlc2dVY"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-primary tracking-tight truncate">MindMap AI</span><span class="font-label-sm text-label-sm text-on-surface-variant truncate">Assessment Results</span></div></div><div class="flex items-center gap-space-xs"><button aria-label="Student Profile" class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-variant/40 transition-colors" id="userProfileBtn"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX9sAoHll1-1adycj4cb1xLVK-V-fjrmza9cXGg1W8xLtHfT4dsyruBcq0PzaUgZXgLNbRd_XQOsckp8jDs0ogPZq7RNgCXvuaUKOZ_StOxfKaLlmP-Ij_cbZr3SIyEoWYxbnG29mSFCVIeobyDerREfQGeQkUCrsdXWZ1tbwsSYGHdhZvCpRK59cB2o6ZYwi6eiV89eHVYUJhSqt-gw0SI9BOWg-_NICw2mNPuikDeNaG11-v8ApM7Q"/></button></div></div></header><main class="flex flex-col relative w-full pt-16 pb-28 bg-surface px-margin-sm flex-1"><div class="flex flex-col w-full gap-space-md">
+<!-- Celebration Top Banner & Student Greeting -->
+<section class="relative w-full rounded-xl bg-surface-container-lowest p-space-md shadow-sm overflow-hidden">
+<!-- Gentle Ambient Warm Glow Circles -->
+<div class="absolute -right-12 -top-12 w-44 h-44 rounded-full bg-secondary-fixed/40 blur-2xl pointer-events-none"></div>
+<div class="absolute -left-12 -bottom-10 w-44 h-44 rounded-full bg-primary-fixed/40 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<!-- Animated Confetti / Sparkle Pill -->
+<div class="inline-flex items-center gap-space-xs px-3 py-1 rounded-full bg-secondary-container/20 text-on-secondary-container font-label-sm text-label-sm mb-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary" style="font-variation-settings: 'FILL' 1;">celebration</span>
+<span>ประเมินผลเสร็จสมบูรณ์</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">
+        ยินดีด้วย คุณมินตรา! 🎉
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5 max-w-[320px]">
+        ทำแบบทดสอบชีววิทยา: การสังเคราะห์ด้วยแสง สำเร็จแล้ว
+      </p>
+<!-- Score Dial & Ring Visual -->
+<div class="relative w-44 h-44 my-space-md flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 120 120">
+<circle class="text-surface-container" cx="60" cy="60" fill="transparent" r="50" stroke="currentColor" stroke-width="10"></circle>
+<circle class="text-primary transition-all duration-1000 ease-out" cx="60" cy="60" fill="transparent" r="50" stroke="currentColor" stroke-dasharray="314.159" stroke-dashoffset="31.416" stroke-linecap="round" stroke-width="10"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+<div class="flex items-baseline justify-center gap-0.5">
+<span class="font-display-lg-mobile text-display-lg-mobile text-primary leading-none">9</span>
+<span class="font-headline-sm text-headline-sm text-outline">/ 10</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant font-medium mt-1">ความแม่นยำ 90%</span>
+</div>
+<!-- Float Badge -->
+<div class="absolute bottom-1 right-2 bg-primary text-on-primary rounded-full px-2.5 py-1 shadow-sm flex items-center gap-1 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">verified</span>
+<span>ผ่านเกณฑ์</span>
+</div>
+</div>
+<!-- Mastery Level Tag -->
+<div class="w-full bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant">ระดับความเข้าใจรวม</span>
+<span class="font-label-lg text-label-lg text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+            ยอดเยี่ยม (Mastery Level)
+          </span>
+</div>
+<div class="w-full h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full w-[90%]"></div>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant text-left mt-0.5">
+          ⏱️ ใช้เวลาเฉลี่ย 45 วินาที/ข้อ • ความแม่นยำเชิงมโนทัศน์ 92%
+        </p>
+</div>
+</div>
+</section>
+<!-- Streak & Achievement Mini Bento -->
+<section class="grid grid-cols-2 gap-gutter-sm w-full">
+<!-- Streak Card -->
+<div class="rounded-xl bg-surface-container-lowest p-space-sm shadow-sm flex items-center gap-space-sm hover:shadow-md transition-shadow cursor-pointer" onclick="showToast('🔥 สถิติเรียนติดต่อกัน 5 วัน ยอดเยี่ยมมาก!')">
+<div class="w-11 h-11 rounded-full bg-secondary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-secondary text-[24px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">จังหวะการเรียน</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">5 วันต่อเนื่อง!</span>
+</div>
+</div>
+<!-- Badge Card -->
+<div class="rounded-xl bg-surface-container-lowest p-space-sm shadow-sm flex items-center gap-space-sm hover:shadow-md transition-shadow cursor-pointer" onclick="showToast('🎖️ ตราความเชี่ยวชาญชีววิทยาพืช ระดับ Gold')">
+<div class="w-11 h-11 rounded-full bg-tertiary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-tertiary text-[24px]" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant">ตราความเชี่ยวชาญ</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">ชีววิทยาพืช</span>
+</div>
+</div>
+</section>
+<!-- Topic Breakdown (วิเคราะห์ความเข้าใจตามหัวข้อย่อย) -->
+<section class="w-full flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-space-xs">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">
+        วิเคราะห์ตามหัวข้อย่อย
+      </h2>
+<span class="font-label-sm text-label-sm text-on-surface-variant">3 หัวข้อที่วัดผล (แตะเพื่อดูรายละเอียด)</span>
+</div>
+<!-- Topic 1 -->
+<div class="w-full rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-space-xs cursor-pointer select-none transition-all hover:bg-surface-container-low/40" onclick="toggleAccordion('topic-1')">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="w-8 h-8 rounded-full bg-primary-fixed/40 flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">wb_sunny</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface truncate">ปฏิกิริยาแสง (Light Reaction)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">โฟโตฟอสโฟรีเลชัน &amp; ถ่ายทอดอิเล็กตรอน</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 flex-shrink-0">
+<span class="font-label-lg text-label-lg text-primary bg-primary-fixed/40 px-2.5 py-0.5 rounded-full">100%</span>
+<span class="material-symbols-outlined text-[20px] text-outline rotate-chevron" id="chevron-topic-1">expand_more</span>
+</div>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden mt-1">
+<div class="h-full bg-primary rounded-full w-full"></div>
+</div>
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+        เข้าใจมโนทัศน์อย่างถ่องแท้
+      </span>
+<!-- Accordion Content -->
+<div class="accordion-content" id="content-topic-1">
+<div class="mt-3 pt-3 border-t border-surface-variant/70 flex flex-col gap-2">
+<div class="flex items-center justify-between text-body-sm font-label-sm">
+<span class="text-on-surface-variant">สถิติคำตอบ:</span>
+<span class="font-semibold text-primary">ถูกต้อง 4/4 ข้อ (100%)</span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col gap-1">
+<span class="font-label-sm text-primary font-semibold">💡 จุดเด่นในการทำโจทย์:</span>
+<p class="font-body-sm text-xs text-on-surface leading-relaxed">
+แม่นยำในตำแหน่งการเกิดปฏิกิริยาบนไทลาคอยด์ (Thylakoid Membrane), การสร้าง ATP แบบ Chemiosmosis และการจำแนก Cyclic vs Non-cyclic electron flow ได้ถูกต้องชัดเจน
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Topic 2 -->
+<div class="w-full rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-space-xs cursor-pointer select-none transition-all hover:bg-surface-container-low/40" onclick="toggleAccordion('topic-2')">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="w-8 h-8 rounded-full bg-primary-fixed/40 flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">cycle</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface truncate">การตรึงคาร์บอน (Calvin Cycle)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">คาร์บอกซิเลชัน, รีดักชัน, รีเจเนอเรชัน</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 flex-shrink-0">
+<span class="font-label-lg text-label-lg text-primary bg-primary-fixed/40 px-2.5 py-0.5 rounded-full">100%</span>
+<span class="material-symbols-outlined text-[20px] text-outline rotate-chevron" id="chevron-topic-2">expand_more</span>
+</div>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden mt-1">
+<div class="h-full bg-primary rounded-full w-full"></div>
+</div>
+<span class="font-label-sm text-label-sm text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span>
+        จำแนกขั้นตอนได้แม่นยำทุกข้อ
+      </span>
+<!-- Accordion Content -->
+<div class="accordion-content" id="content-topic-2">
+<div class="mt-3 pt-3 border-t border-surface-variant/70 flex flex-col gap-2">
+<div class="flex items-center justify-between text-body-sm font-label-sm">
+<span class="text-on-surface-variant">สถิติคำตอบ:</span>
+<span class="font-semibold text-primary">ถูกต้อง 3/3 ข้อ (100%)</span>
+</div>
+<div class="bg-surface-container-low p-2.5 rounded-lg flex flex-col gap-1">
+<span class="font-label-sm text-primary font-semibold">💡 จุดเด่นในการทำโจทย์:</span>
+<p class="font-body-sm text-xs text-on-surface leading-relaxed">
+เข้าใจบทบาทของเอนไซม์ Rubisco ในกระบวนการ Carboxylation รวมถึงอัตราส่วนการใช้โมเลกุล ATP และ NADPH ในการสังเคราะห์น้ำตาล PGAL อย่างสมบูรณ์
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Topic 3 (Needs Review) -->
+<div class="w-full rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-space-xs cursor-pointer select-none transition-all hover:bg-surface-container-low/40" onclick="toggleAccordion('topic-3')">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs min-w-0">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed/50 flex items-center justify-center text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[18px]">thermostat</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-lg text-label-lg text-on-surface truncate">ปัจจัยที่มีผลต่อการสังเคราะห์</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">ความเข้มแสง, ความเข้ม CO2, อุณหภูมิ</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5 flex-shrink-0">
+<span class="font-label-lg text-label-lg text-secondary bg-secondary-container/30 px-2.5 py-0.5 rounded-full">66%</span>
+<span class="material-symbols-outlined text-[20px] text-outline rotate-chevron" id="chevron-topic-3">expand_more</span>
+</div>
+</div>
+<div class="w-full h-1.5 bg-surface-container-high rounded-full overflow-hidden mt-1">
+<div class="h-full bg-secondary rounded-full w-[66%]"></div>
+</div>
+<span class="font-label-sm text-label-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">info</span>
+        มี 1 ข้อที่สับสน - แนะนำทบทวนเพิ่ม
+      </span>
+<!-- Accordion Content -->
+<div class="accordion-content" id="content-topic-3">
+<div class="mt-3 pt-3 border-t border-surface-variant/70 flex flex-col gap-2">
+<div class="flex items-center justify-between text-body-sm font-label-sm">
+<span class="text-on-surface-variant">สถิติคำตอบ:</span>
+<span class="font-semibold text-secondary">ถูกต้อง 2/3 ข้อ (66%)</span>
+</div>
+<div class="bg-secondary-container/15 p-2.5 rounded-lg border border-secondary/20 flex flex-col gap-1">
+<span class="font-label-sm text-secondary font-semibold">⚠️ จุดที่ตอบผิด (ข้อ 7):</span>
+<p class="font-body-sm text-xs text-on-surface leading-relaxed">
+คำถามเกี่ยวกับ "ผลกระทบเมื่ออุณหภูมิสูงเกิน 40°C" — คุณเลือกตอบว่าการตรึง CO2 ยังดำเนินปกติ แท้จริงแล้ว Rubisco จะหันไปทำ Photorespiration สูงขึ้น ทำให้ประสิทธิภาพลดลง
+</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- AI Diagnostic & Targeted Review Plan -->
+<section class="w-full rounded-xl bg-surface-container-low p-space-md shadow-sm flex flex-col gap-space-sm relative overflow-hidden">
+<div class="flex items-center gap-space-xs">
+<div class="w-7 h-7 rounded-full bg-primary flex items-center justify-center text-on-primary">
+<span class="material-symbols-outlined text-[16px]">psychology</span>
+</div>
+<span class="font-label-lg text-label-lg text-primary">คำแนะนำเฉพาะบุคคลจาก MindMap AI</span>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-space-sm flex flex-col gap-1 shadow-sm">
+<span class="font-label-sm text-label-sm text-secondary font-semibold">🔍 จุดที่ตรวจพบความเข้าใจคลาดเคลื่อน</span>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed">
+        พบความลังเลในโจทย์ข้อ 7 หัวข้อ <strong class="text-on-surface font-semibold">"จุดอิ่มตัวของแสงและอุณหภูมิวิกฤต"</strong> มีแนวโน้มสับสนระหว่างกลไกการปรับตัวของพืช C3 กับ พืช C4 ในสภาพแสงจัด
+      </p>
+</div>
+<!-- Contextual Quick Action Buttons -->
+<div class="flex flex-col gap-space-xs pt-1">
+<button class="w-full h-11 px-4 rounded-full bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm active:scale-98 transition-all hover:brightness-105" id="openGraphBtn">
+<span class="material-symbols-outlined text-[18px]">hub</span>
+<span>เปิดทบทวนโหนดนี้บน Knowledge Graph</span>
+</button>
+<button class="w-full h-11 px-4 rounded-full bg-surface-container-lowest text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm active:scale-98 transition-all hover:bg-surface-container-high/40" id="openWeakQuizBtn">
+<span class="material-symbols-outlined text-[18px] text-secondary">cached</span>
+<span>ลองทำควิซชุดแก้จุดอ่อน (Weak Spot Quiz 5 ข้อ)</span>
+</button>
+</div>
+</section>
+<!-- Visual Evidence Placeholder / Notebook Recap -->
+<section class="w-full rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[20px]">auto_stories</span>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">สมุดสรุปบันทึกอัตโนมัติ</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">สร้างแล้ว 1 หน้า</span>
+</div>
+<div class="relative w-full h-40 rounded-lg overflow-hidden bg-surface-container cursor-pointer group active:scale-[0.99] transition-transform" id="notebookPreviewCard">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A warm organic notebook illustration of a biological mind map detailing plant photosynthesis, light reactions and Calvin cycle, with soft watercolor green and warm beige tones, handwritten Thai study notes, clear diagrams, soft sunlit library ambience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYA5NfRWzzpz7EI5xVQ2gEGTa75RLOgieIHeaHpWJvIv1G5M8tOEBGkK0KjXE0OSIb8M_f1X_72wdB6N19raBe79Nze_b-QB0qTyK4DcZ6J-LCNAX8SWlclAmGpr77OF2NPORODM9eWr_7E-gkXze2UQKH1_-h4-YUfE-_-oPJU5PLPqurvSoecCNgt3trHVhKXMdlSJ10qyOLMqFfjtlHE1yim7e6hv4nCiFeOC19rI_stfh0hm37yw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/75 via-inverse-surface/20 to-transparent flex items-end justify-between p-space-sm">
+<span class="text-on-primary font-label-md text-label-md flex items-center gap-1.5 drop-shadow">
+<span class="material-symbols-outlined text-[18px]">zoom_in</span>
+แผ่นสรุปมโนทัศน์: การสังเคราะห์ด้วยแสง ฉบับกระชับ
+</span>
+<span class="bg-surface-container-lowest/90 text-primary text-xs font-semibold px-2 py-0.5 rounded-full shadow">แตะดูฉบับเต็ม</span>
+</div>
+</div>
+</section>
+<!-- Bottom Action Buttons -->
+<section class="w-full flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full h-12 rounded-full bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm active:scale-98 transition-all hover:brightness-105" id="saveNotebookBtn">
+<span class="material-symbols-outlined text-[20px]" id="saveIcon">bookmark_add</span>
+<span id="saveText">บันทึกสรุปบทเรียนเข้าคลังของฉัน</span>
+</button>
+<div class="grid grid-cols-2 gap-space-xs w-full">
+<button class="h-11 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-sm active:scale-98 transition-all hover:bg-surface-container-high/40" id="shareButton">
+<span class="material-symbols-outlined text-[18px] text-primary">share</span>
+<span>แชร์ผลลัพธ์</span>
+</button>
+<button class="h-11 rounded-full bg-surface-container-lowest text-on-surface font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-sm active:scale-98 transition-all hover:bg-surface-container-high/40" id="retakeQuizBtn">
+<span class="material-symbols-outlined text-[18px] text-tertiary">replay</span>
+<span>ทำควิซใหม่อีกครั้ง</span>
+</button>
+</div>
+</section>
+</div>
+</main>
+<!-- Interactive Modals & Dialogs -->
+<!-- 1. Knowledge Graph Focus Modal -->
+<div class="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-inverse-surface/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300" id="graphModal">
+<div class="w-full max-w-md bg-surface-container-lowest rounded-t-2xl sm:rounded-2xl p-5 shadow-2xl flex flex-col gap-4 max-h-[85vh] overflow-y-auto transform translate-y-4 transition-transform duration-300">
+<div class="flex items-center justify-between border-b border-surface-variant pb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">hub</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Knowledge Graph Node</h3>
+<p class="font-label-sm text-xs text-on-surface-variant">โหนดที่ตรวจพบจุดอ่อนในการทำโจทย์</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-outline hover:bg-surface-container-high" onclick="closeModal('graphModal')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="bg-surface-container-low rounded-xl p-4 flex flex-col gap-3 border border-primary/20">
+<div class="flex items-center justify-between">
+<span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-secondary-container/40 text-secondary">โหนดเป้าหมาย</span>
+<span class="text-xs text-on-surface-variant">ชีววิทยา ม.ปลาย &gt; พืช</span>
+</div>
+<h4 class="font-semibold text-base text-primary">🌿 ปัจจัยจำกัด &amp; Photorespiration ในพืช C3 vs C4</h4>
+<p class="text-xs text-on-surface leading-relaxed">
+        ในสภาวะที่มีแสงแดดจัดและอุณหภูมิสูงกว่า 35°C ปากใบของพืช C3 จะปิดเพื่อลดการคายน้ำ ทำให้ระดับ CO2 ในเซลล์ลดต่ำลง เอนไซม์ <strong>Rubisco</strong> จึงจับกับ O2 แทน (การหายใจแสง) ส่งผลให้ประสิทธิภาพการสังเคราะห์ด้วยแสงลดลงมากถึง 25-50% แตกต่างจากพืช C4 ที่มีกลไก Krantz Anatomy กักเก็บ CO2 ได้ดีกว่า
+      </p>
+<div class="p-2.5 bg-surface-container-lowest rounded-lg border border-outline-variant/60 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-[24px]">lightbulb</span>
+<p class="text-[11px] text-on-surface-variant">คีย์เวิร์ดสำคัญ: Rubisco Oxygenase, Krantz Anatomy, Bundle Sheath Cell</p>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 h-11 bg-primary text-on-primary rounded-full font-label-md text-label-md font-semibold flex items-center justify-center gap-1.5 shadow active:scale-95 transition-all" onclick="closeModal('graphModal'); showToast('🗺️ นำทางไปยังโหนดความรู้บนผังหลักเรียบร้อย');">
+<span class="material-symbols-outlined text-[18px]">explore</span>
+<span>สำรวจในผังเต็ม</span>
+</button>
+<button class="px-4 h-11 bg-surface-container-high text-on-surface rounded-full font-label-md text-label-md" onclick="closeModal('graphModal')">ปิด</button>
+</div>
+</div>
+</div>
+<!-- 2. Weak Spot Mini-Quiz Modal -->
+<div class="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-inverse-surface/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300" id="quizModal">
+<div class="w-full max-w-md bg-surface-container-lowest rounded-t-2xl sm:rounded-2xl p-5 shadow-2xl flex flex-col gap-4 max-h-[90vh] overflow-y-auto transform translate-y-4 transition-transform duration-300">
+<div class="flex items-center justify-between border-b border-surface-variant pb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[24px]">quiz</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Weak Spot Quiz (ข้อ 1/5)</h3>
+<p class="font-label-sm text-xs text-on-surface-variant">ควิซกระชับ 5 ข้อเฉพาะจุดที่ยังสับสน</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-outline hover:bg-surface-container-high" onclick="closeModal('quizModal')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary h-full rounded-full w-1/5"></div>
+</div>
+<div class="flex flex-col gap-2">
+<span class="text-xs font-semibold text-secondary">คำถามทบทวนแนวคิด</span>
+<p class="text-sm font-semibold text-on-surface leading-snug">
+        เมื่ออุณหภูมิสิ่งแวดล้อมพุ่งสูงขึ้นเกินกว่า 40°C และพืช C3 ปิดปากใบเพื่อป้องกันการสูญเสียน้ำ เหตุใดอัตราการสังเคราะห์ด้วยแสงจึงลดลงอย่างฮวบฮาบ?
+      </p>
+</div>
+<div class="flex flex-col gap-2" id="quizOptions">
+<button class="w-full text-left p-3 rounded-xl border border-surface-variant bg-surface-container-lowest hover:bg-surface-container-low text-xs text-on-surface transition-all flex items-center justify-between" onclick="handleQuizAnswer(this, false)">
+<span>ก. คลอโรฟิลล์ถูกทำลายโดยรังสีอินฟราเรดทันที</span>
+<span class="material-symbols-outlined text-[16px] text-outline opacity-0 feedback-icon">check</span>
+</button>
+<button class="w-full text-left p-3 rounded-xl border border-surface-variant bg-surface-container-lowest hover:bg-surface-container-low text-xs text-on-surface transition-all flex items-center justify-between" onclick="handleQuizAnswer(this, true)">
+<span>ข. CO2 ในใบต่ำลง ทำให้ Rubisco หันไปเร่งปฏิกิริยากับ O2 (Photorespiration)</span>
+<span class="material-symbols-outlined text-[16px] text-outline opacity-0 feedback-icon">check</span>
+</button>
+<button class="w-full text-left p-3 rounded-xl border border-surface-variant bg-surface-container-lowest hover:bg-surface-container-low text-xs text-on-surface transition-all flex items-center justify-between" onclick="handleQuizAnswer(this, false)">
+<span>ค. พืชเปลี่ยนไปใช้กระบวนการหมักแทนเพื่อสร้างพลังงาน</span>
+<span class="material-symbols-outlined text-[16px] text-outline opacity-0 feedback-icon">check</span>
+</button>
+</div>
+<div class="hidden bg-surface-container-low p-3 rounded-xl border border-primary/30 flex flex-col gap-1 text-xs" id="quizExplanation">
+<span class="font-bold text-primary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> คำอธิบายที่ถูกต้อง:
+      </span>
+<p class="text-on-surface">
+        ถูกต้องแล้ว! เมื่อปากใบปิด ระดับ CO2 ภายในช่องว่างระหว่างเซลล์ลดลงอย่างมาก ส่งผลให้ Rubisco เกิดการตรึง O2 กลายเป็น Photorespiration สูญเสียพลังงานโดยไม่ได้น้ำตาล
+      </p>
+</div>
+<div class="flex justify-end gap-2 pt-2">
+<button class="px-4 py-2 text-xs font-semibold text-on-surface-variant" onclick="closeModal('quizModal')">ยกเลิก</button>
+<button class="px-5 py-2 text-xs font-semibold rounded-full bg-primary text-on-primary shadow disabled:opacity-50" disabled="" id="nextQuizBtn" onclick="nextQuizStep()">ข้อถัดไป</button>
+</div>
+</div>
+</div>
+<!-- 3. Smart Summary Flipbook Modal -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/75 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 p-4" id="notebookModal">
+<div class="w-full max-w-lg bg-surface-container-lowest rounded-2xl shadow-2xl flex flex-col max-h-[90vh] overflow-hidden transform scale-95 transition-transform duration-300">
+<div class="flex items-center justify-between px-4 py-3 border-b border-surface-variant bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">auto_stories</span>
+<div>
+<h3 class="font-headline-sm text-sm text-on-surface font-semibold">สมุดสรุปบันทึกมโนทัศน์ (Visual Note)</h3>
+<p class="text-[11px] text-on-surface-variant">ชีววิทยา: กระบวนการสังเคราะห์ด้วยแสง</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full flex items-center justify-center text-outline hover:bg-surface-container-high" onclick="closeModal('notebookModal')">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="relative w-full aspect-[4/3] bg-surface-container overflow-hidden">
+<img alt="Visual Notebook Full" class="w-full h-full object-contain" id="modalNoteImg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYA5NfRWzzpz7EI5xVQ2gEGTa75RLOgieIHeaHpWJvIv1G5M8tOEBGkK0KjXE0OSIb8M_f1X_72wdB6N19raBe79Nze_b-QB0qTyK4DcZ6J-LCNAX8SWlclAmGpr77OF2NPORODM9eWr_7E-gkXze2UQKH1_-h4-YUfE-_-oPJU5PLPqurvSoecCNgt3trHVhKXMdlSJ10qyOLMqFfjtlHE1yim7e6hv4nCiFeOC19rI_stfh0hm37yw"/>
+<div class="absolute bottom-2 right-2 bg-inverse-surface/80 text-inverse-on-surface text-[10px] px-2 py-0.5 rounded-full backdrop-blur-sm">
+        หน้า 1 จาก 1
+      </div>
+</div>
+<div class="p-4 flex flex-col gap-2.5 overflow-y-auto">
+<div class="flex items-center justify-between">
+<span class="font-semibold text-xs text-primary">📑 ไฮไลต์สรุปใจความสำคัญ</span>
+<span class="text-[11px] text-on-surface-variant">MindMap Thai AI Generated</span>
+</div>
+<ul class="text-xs text-on-surface space-y-1.5 list-disc list-inside">
+<li><strong>Light Reactions:</strong> เกิดขึ้นที่ Thylakoid แสงกระตุ้น Chl สร้าง ATP และ NADPH พร้อมปล่อย O2 จากการแตกตัวของน้ำ (Photolysis)</li>
+<li><strong>Calvin Cycle:</strong> เกิดขึ้นที่ Stroma ใช้ CO2 + RuBP ผ่านขั้นตอน Carboxylation, Reduction และ Regeneration จนได้น้ำตาล G3P</li>
+<li><strong>ปัจจัยจำกัด:</strong> กฎของแบล็กแมน (Blackman's Law) ปัจจัยที่มีปริมาณน้อยที่สุดจะเป็นตัวกำหนดอัตราการสังเคราะห์</li>
+</ul>
+<div class="pt-2 flex gap-2">
+<button class="flex-1 h-10 rounded-full bg-primary text-on-primary text-xs font-semibold flex items-center justify-center gap-1.5 shadow active:scale-95 transition-all" onclick="saveNotebookAction(); closeModal('notebookModal');">
+<span class="material-symbols-outlined text-[16px]">bookmark_add</span>
+<span>บันทึกลงคลังของฉัน</span>
+</button>
+<button class="px-4 h-10 rounded-full bg-surface-container-high text-on-surface text-xs font-semibold" onclick="closeModal('notebookModal')">
+          ปิด
+        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- 4. Retake Quiz Confirm Modal -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 p-4" id="retakeModal">
+<div class="w-full max-w-sm bg-surface-container-lowest rounded-2xl p-5 shadow-2xl flex flex-col gap-3 text-center transform scale-95 transition-transform duration-300">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed text-tertiary flex items-center justify-center mx-auto">
+<span class="material-symbols-outlined text-[28px]">replay</span>
+</div>
+<h3 class="font-headline-sm text-base text-on-surface font-semibold">เริ่มทำแบบทดสอบใหม่อีกครั้ง?</h3>
+<p class="font-body-sm text-xs text-on-surface-variant">
+      ระบบจะสุ่มชุดคำถามและตัวเลือกใหม่เพื่อทดสอบความแม่นยำของคุณ คะแนนที่ดีที่สุดจะถูกบันทึกไว้ในสถิติของคุณ
+    </p>
+<div class="flex gap-2 pt-2">
+<button class="flex-1 h-10 rounded-full bg-surface-container-high text-on-surface font-label-md text-xs font-semibold" onclick="closeModal('retakeModal')">
+        ยกเลิก
+      </button>
+<button class="flex-1 h-10 rounded-full bg-primary text-on-primary font-label-md text-xs font-semibold shadow active:scale-95 transition-all" onclick="startRetakeQuiz()">
+        เริ่มทำทันที
+      </button>
+</div>
+</div>
+</div>
+<!-- Notification Toast Simulation -->
+<div class="opacity-0 pointer-events-none fixed top-20 left-1/2 transform -translate-x-1/2 z-50 bg-inverse-surface text-inverse-on-surface px-4 py-2.5 rounded-full font-label-sm text-label-sm shadow-lg transition-all duration-300 flex items-center gap-2 max-w-[90vw]" id="toast">
+<span class="material-symbols-outlined text-[18px] text-primary-fixed" id="toastIcon">check_circle</span>
+<span id="toastMsg">คัดลอกลิงก์ผลการเรียนรู้แล้ว!</span>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 inset-x-0 z-50 pointer-events-none pb-safe px-margin flex justify-center"><nav class="pointer-events-auto w-full max-w-[420px] h-16 bg-surface-container-lowest/90 backdrop-blur-xl rounded-full shadow-[0_8px_24px_-6px_rgba(44,40,37,0.08),0_16px_32px_-8px_rgba(44,40,37,0.04)] flex items-center justify-around px-space-xs mb-space-sm" data-active-classes="bg-primary-fixed/40 text-primary" id="bottomNav">
+<a class="nav-tab flex flex-col items-center justify-center w-16 h-12 rounded-full text-on-surface-variant hover:text-primary transition-all cursor-pointer" data-tab="home">
+<span class="material-symbols-outlined text-[22px]">home</span>
+<span class="font-label-sm text-label-sm mt-0.5">หน้าแรก</span>
+</a>
+<a class="nav-tab flex flex-col items-center justify-center w-16 h-12 rounded-full text-on-surface-variant hover:text-primary transition-all cursor-pointer" data-tab="graph">
+<span class="material-symbols-outlined text-[22px]">hub</span>
+<span class="font-label-sm text-label-sm mt-0.5">ผังความรู้</span>
+</a>
+<a class="nav-tab flex flex-col items-center justify-center w-16 h-12 rounded-full text-on-surface-variant hover:text-primary transition-all cursor-pointer" data-tab="quiz">
+<span class="material-symbols-outlined text-[22px]">psychology_alt</span>
+<span class="font-label-sm text-label-sm mt-0.5">ควิซ</span>
+</a>
+<a aria-current="page" class="nav-tab flex flex-col items-center justify-center w-16 h-12 rounded-full transition-all bg-primary-fixed/40 text-primary cursor-pointer" data-tab="results">
+<span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">award_star</span>
+<span class="font-label-sm text-label-sm mt-0.5 font-semibold">ผลประเมิน</span>
+</a>
+</nav></div>
+<script>
+  // Toast Helper
+  let toastTimer = null;
+  function showToast(message, iconName = 'check_circle') {
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toastMsg');
+    const toastIcon = document.getElementById('toastIcon');
+    if (!toast) return;
+    
+    if (toastMsg) toastMsg.textContent = message;
+    if (toastIcon) toastIcon.textContent = iconName;
+    
+    toast.classList.remove('opacity-0', 'pointer-events-none', '-translate-y-2');
+    toast.classList.add('opacity-100', 'translate-y-0');
+    
+    if (toastTimer) clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => {
+      toast.classList.remove('opacity-100', 'translate-y-0');
+      toast.classList.add('opacity-0', 'pointer-events-none', '-translate-y-2');
+    }, 2400);
+  }
+
+  // Modal Helpers
+  function openModal(id) {
+    const modal = document.getElementById(id);
+    if (!modal) return;
+    modal.classList.remove('opacity-0', 'pointer-events-none');
+    modal.classList.add('opacity-100');
+    const content = modal.querySelector('div');
+    if (content) {
+      content.classList.remove('translate-y-4', 'scale-95');
+      content.classList.add('translate-y-0', 'scale-100');
+    }
+  }
+
+  function closeModal(id) {
+    const modal = document.getElementById(id);
+    if (!modal) return;
+    modal.classList.add('opacity-0', 'pointer-events-none');
+    modal.classList.remove('opacity-100');
+    const content = modal.querySelector('div');
+    if (content) {
+      content.classList.add('translate-y-4', 'scale-95');
+      content.classList.remove('translate-y-0', 'scale-100');
+    }
+  }
+
+  // Accordion Toggle Functionality
+  function toggleAccordion(id) {
+    const content = document.getElementById('content-' + id);
+    const chevron = document.getElementById('chevron-' + id);
+    if (!content) return;
+    
+    const isOpen = content.classList.contains('expanded');
+    // Close other open accordions optionally for a cleaner view
+    document.querySelectorAll('.accordion-content').forEach(el => {
+      if (el !== content) el.classList.remove('expanded');
+    });
+    document.querySelectorAll('.rotate-chevron').forEach(el => {
+      if (el !== chevron) el.classList.remove('open');
+    });
+
+    if (isOpen) {
+      content.classList.remove('expanded');
+      chevron.classList.remove('open');
+    } else {
+      content.classList.add('expanded');
+      chevron.classList.add('open');
+    }
+  }
+
+  // Notebook Save Action
+  let isSaved = false;
+  function saveNotebookAction() {
+    const btn = document.getElementById('saveNotebookBtn');
+    const icon = document.getElementById('saveIcon');
+    const text = document.getElementById('saveText');
+    isSaved = !isSaved;
+    
+    if (isSaved) {
+      if (icon) icon.textContent = 'bookmark_added';
+      if (text) text.textContent = 'บันทึกแล้วในคลังการเรียนรู้';
+      btn.classList.remove('bg-primary');
+      btn.classList.add('bg-primary-container');
+      showToast('บันทึกสรุปบทเรียนเข้าคลังเรียบร้อยแล้ว! 📚');
+    } else {
+      if (icon) icon.textContent = 'bookmark_add';
+      if (text) text.textContent = 'บันทึกสรุปบทเรียนเข้าคลังของฉัน';
+      btn.classList.add('bg-primary');
+      btn.classList.remove('bg-primary-container');
+      showToast('นำสรุปออกจากคลังแล้ว');
+    }
+  }
+
+  // Quiz interactive logic
+  function handleQuizAnswer(btn, isCorrect) {
+    const options = document.querySelectorAll('#quizOptions button');
+    options.forEach(b => {
+      b.disabled = true;
+      b.classList.remove('hover:bg-surface-container-low');
+    });
+    const explanation = document.getElementById('quizExplanation');
+    const nextBtn = document.getElementById('nextQuizBtn');
+    
+    if (isCorrect) {
+      btn.classList.add('bg-primary-fixed/40', 'border-primary', 'text-primary');
+      btn.querySelector('.feedback-icon').classList.remove('opacity-0');
+      btn.querySelector('.feedback-icon').textContent = 'check_circle';
+      btn.querySelector('.feedback-icon').classList.add('text-primary');
+      if (explanation) explanation.classList.remove('hidden');
+    } else {
+      btn.classList.add('bg-error-container/40', 'border-error', 'text-error');
+      btn.querySelector('.feedback-icon').classList.remove('opacity-0');
+      btn.querySelector('.feedback-icon').textContent = 'cancel';
+      btn.querySelector('.feedback-icon').classList.add('text-error');
+      if (explanation) {
+        explanation.classList.remove('hidden');
+        explanation.innerHTML = '<span class="font-bold text-secondary flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">info</span> ยังไม่ถูกต้อง:</span><p class="text-on-surface">คำตอบที่ถูกต้องคือข้อ ข. เมื่อปากใบปิด อัตราส่วน CO2 ต่ำลงจน Rubisco เร่งการสลายสารด้วย O2 แทน</p>';
+      }
+    }
+    if (nextBtn) nextBtn.disabled = false;
+  }
+
+  function nextQuizStep() {
+    closeModal('quizModal');
+    showToast('🎉 เยี่ยมมาก! คุณพิชิตจุดอ่อนข้อนี้ได้สำเร็จ');
+  }
+
+  function startRetakeQuiz() {
+    closeModal('retakeModal');
+    showToast('🚀 กำลังโหลดควิซชุดใหม่... ขอให้โชคดี!', 'psychology');
+  }
+
+  // Attach event listeners
+  document.addEventListener('DOMContentLoaded', function() {
+    // Share button
+    const shareBtn = document.getElementById('shareButton');
+    if (shareBtn) {
+      shareBtn.addEventListener('click', function() {
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(window.location.href).catch(() => {});
+        }
+        showToast('คัดลอกลิงก์ผลการเรียนรู้แล้ว! 🔗');
+      });
+    }
+
+    // Save button
+    const saveBtn = document.getElementById('saveNotebookBtn');
+    if (saveBtn) {
+      saveBtn.addEventListener('click', saveNotebookAction);
+    }
+
+    // Modal triggers
+    const openGraphBtn = document.getElementById('openGraphBtn');
+    if (openGraphBtn) {
+      openGraphBtn.addEventListener('click', () => openModal('graphModal'));
+    }
+
+    const openWeakQuizBtn = document.getElementById('openWeakQuizBtn');
+    if (openWeakQuizBtn) {
+      openWeakQuizBtn.addEventListener('click', () => {
+        // Reset quiz options state
+        const options = document.querySelectorAll('#quizOptions button');
+        options.forEach(b => {
+          b.disabled = false;
+          b.className = 'w-full text-left p-3 rounded-xl border border-surface-variant bg-surface-container-lowest hover:bg-surface-container-low text-xs text-on-surface transition-all flex items-center justify-between';
+          const icon = b.querySelector('.feedback-icon');
+          if (icon) {
+            icon.classList.add('opacity-0');
+            icon.className = 'material-symbols-outlined text-[16px] text-outline opacity-0 feedback-icon';
+          }
+        });
+        const exp = document.getElementById('quizExplanation');
+        if (exp) exp.classList.add('hidden');
+        const nextBtn = document.getElementById('nextQuizBtn');
+        if (nextBtn) nextBtn.disabled = true;
+        openModal('quizModal');
+      });
+    }
+
+    const notebookCard = document.getElementById('notebookPreviewCard');
+    if (notebookCard) {
+      notebookCard.addEventListener('click', () => openModal('notebookModal'));
+    }
+
+    const retakeBtn = document.getElementById('retakeQuizBtn');
+    if (retakeBtn) {
+      retakeBtn.addEventListener('click', () => openModal('retakeModal'));
+    }
+
+    const userProfileBtn = document.getElementById('userProfileBtn');
+    if (userProfileBtn) {
+      userProfileBtn.addEventListener('click', () => showToast('👤 โปรไฟล์: มินตรา วงศ์วิไล (ม.5/2)'));
+    }
+
+    // Bottom Navigation switching tabs
+    const navTabs = document.querySelectorAll('.nav-tab');
+    navTabs.forEach(tab => {
+      tab.addEventListener('click', function(e) {
+        e.preventDefault();
+        navTabs.forEach(t => {
+          t.removeAttribute('aria-current');
+          t.classList.remove('bg-primary-fixed/40', 'text-primary');
+          t.classList.add('text-on-surface-variant');
+          const span = t.querySelector('.material-symbols-outlined');
+          if (span) span.style.fontVariationSettings = "'FILL' 0";
+          const label = t.querySelector('.font-label-sm');
+          if (label) label.classList.remove('font-semibold');
+        });
+        this.setAttribute('aria-current', 'page');
+        this.classList.remove('text-on-surface-variant');
+        this.classList.add('bg-primary-fixed/40', 'text-primary');
+        const span = this.querySelector('.material-symbols-outlined');
+        if (span) span.style.fontVariationSettings = "'FILL' 1";
+        const label = this.querySelector('.font-label-sm');
+        if (label) label.classList.add('font-semibold');
+
+        const tabType = this.getAttribute('data-tab');
+        if (tabType === 'home') {
+          showToast('🏠 สลับไปหน้าแรก (Home Dashboard)', 'home');
+        } else if (tabType === 'graph') {
+          showToast('ผังมโนทัศน์ความรู้ (Knowledge Graph)', 'hub');
+        } else if (tabType === 'quiz') {
+          showToast('แบบฝึกหัด & ควิซประจำบทเรียน', 'psychology_alt');
+        } else if (tabType === 'results') {
+          showToast('สรุปผลการประเมินรอบปัจจุบัน', 'award_star');
+        }
+      });
+    });
+
+    // Close modals on clicking backdrop
+    ['graphModal', 'quizModal', 'notebookModal', 'retakeModal'].forEach(modalId => {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.addEventListener('click', function(e) {
+          if (e.target === this) closeModal(modalId);
+        });
+      }
+    });
+  });
+</script>
+</body></html>
